@@ -1,0 +1,24 @@
+h1{
+    background-color: rgb(224, 153, 65);
+    border:1px solid black;
+    width:200px;
+
+}
+span{
+    background-color: palevioletred;
+    border:1px solid black;
+    width: 500px;
+    padding:10px;
+}
+
+
+div{
+    height:200px;
+    width:200px;
+    background-color: rgb(177, 137, 215);
+    border:1px solid black;
+    margin: 50px;
+}
+/* inline(span) element shares space but block (h1 ,div ..) does not shares space */
+
+/* em relative to parent */

@@ -1,0 +1,25 @@
+section{
+    width: 80%;
+    height:400px;
+    background-image:url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg);
+    background-size: cover;
+    margin: auto;
+    
+}
+h1{
+    font-size: 80px;
+    color: rgb(210, 210, 210);
+
+}
+main{
+    width: 80%;
+    margin: 0 auto;
+
+}
+h2{
+    font-family: "Roboto", system-ui;
+  font-weight: 300;
+  font-style: normal;
+
+}
+

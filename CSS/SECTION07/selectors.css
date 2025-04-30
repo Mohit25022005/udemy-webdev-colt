@@ -1,0 +1,114 @@
+/*Universal selector*/
+/* *{
+    background-color: aquamarine;
+} */
+ body{
+    background-color: rgb(194, 253, 253);
+ }
+button{
+
+    font-size: 20px;
+    background-color: rgb(20, 231, 231);
+}
+h1,h2{
+    color:blueviolet
+}
+
+/* id selector*/
+#signup{
+    background-color: rgb(47, 64, 255);
+    color: rgb(235, 179, 179);
+}
+
+/* class selector */
+span{
+    color: #ff00b3;
+}
+.tag{
+    background-color: rgba(255, 0, 0, 0.241);
+    color: rgb(255, 98, 98);
+}
+
+/* decendant selector */
+/*section span a{
+    color: rgb(120, 126, 60);
+}
+(OR)*/
+.post a{
+    color:rgb(120, 126, 60);
+    text-decoration:none;
+    font-weight: 700;
+    
+}
+
+
+footer a{
+    color:red;
+}
+
+/*Adjacent and direct descendant selector*/
+input+button{
+    background-color: rgb(240, 6, 45);
+}
+/*direct child */
+footer>a{
+    color: rgb(7, 172, 150)
+}
+
+/* attribute selector */
+input[type="password"]{
+    color: rgb(249, 58, 58);
+}
+section[class ="post"]{
+    background-color:none;
+    
+}
+/* pseudo class */
+button:hover{
+    background-color: red;
+    color:rgb(212, 255, 101)
+
+}
+.post a:hover{
+    text-decoration: underline ;
+}
+
+.post button:active{
+    background-color:blueviolet
+}
+
+/* input :checked{
+
+} */
+.post :nth-of-type(2n){
+    background-color: rgb(228, 255, 255) ;
+}
+
+/* psuedo elements */
+h2::first-letter{
+    font-size:50px;
+}
+p::first-line{
+    color: purple;
+}
+p::selection{
+    background-color: rgb(205, 50, 50);
+}
+/* the order your styles are declared is matters */
+/* specificity 
+ID
+CLASS,ATTRIBUTE & Psuedo class 
+ElEMENTS and selector
+*/
+
+/* INLINE STYLES and !important */
+
+
+/* inheritance */
+p{
+    background-color: rgb(234, 164, 139);
+
+}
+a{
+    color:inherit
+}

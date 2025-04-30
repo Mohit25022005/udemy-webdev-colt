@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms Demo</title>
+  </head>
+  <body>
+    <h1>FORMS DEMO</h1>
+    <form action="/tacos">
+      <input type="text" placeholder="Username" />
+      <p>
+        <label for="passowrd">Enter a password</label>
+        <input
+          type="password"
+          placeholder="passowrd"
+          id="passowrd"
+          name="pass"
+        />
+      </p>
+      <p>
+        <label for="Colour">Enter a color: </label>
+        <input type="color" id="Colour" name="color" />
+      </p>
+      <input type="file" />
+      <input type="number" />
+      <input type="date" /><br />
+
+      <div class="preference">
+        <label for="cheese">Do you like chese</label>
+        <input
+          type="checkbox"
+          name="cheese"
+          id="cheese"
+          name="types of chesse"
+        />
+      </div>
+      <button>Submit !!!</button>
+      <input type="submit" value="Click me" />
+    </form>
+    <button>submit</button>
+    <h2>hijacking searches</h2>
+    <form action="https://www.google.com/search?q=potato&">
+      <input type="text" name="q" />
+      <button>Search Google</button>
+    </form>
+    <form action="https://www.youtube.com/watch?v=SPP6UHjn-IM">
+      <input type="text" name="v" />
+      <button>Search youtube</button>
+    </form>
+  </body>
+</html>
