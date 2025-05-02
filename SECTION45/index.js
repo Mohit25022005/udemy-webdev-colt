@@ -4,6 +4,14 @@ const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const AppError = require('./AppError'); // Custom error handling class
+//added in section48
+ session=  require('express-session')
+const flash = require('connect-flash')
+app.use(flash());
+
+const sessionOptions = {secret:'thisisnotagoodsecret',resave:false,saveUninitialized:false}
+app.use(session(sessionOptions));
+
 
 const Product = require('./models/product'); // Importing the Product model
 const Farm = require('./models/farm')
@@ -26,6 +34,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 
+app.use((req,res,next)=>{
+    res.locals.messages =  req.flash('success');
+    next();
+
+})
+
 //FARM ROUTES
 
 app.get('/farms',async(req,res)=>{
@@ -40,6 +54,9 @@ app.get('/farms/new',(req,res)=>{
 app.post('/farms',async(req,res)=>{
     const farm = new Farm(req.body);
     await farm.save();
+
+    req.flash('success','successfully made a new farm');
+    
     res.redirect('/farms')
 })
 
